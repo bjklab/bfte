@@ -1,0 +1,10 @@
+Package: bfte
+Type: Package
+Title: A `ggplot2` Theme
+Version: 0.1.0
+Author: Brendan J. Kelly
+Maintainer: Brendan J. Kelly <brendank@upenn.edu>
+Description: Inspired by the tufte `ggthemes` and `tinyplot` format, drawing on the capabilities of `showtext`.
+License: MIT
+Encoding: UTF-8
+LazyData: true
