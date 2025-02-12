@@ -27,11 +27,11 @@ ready_fonts <- function(google_font_name_vector = c("Roboto", "Nothing You Could
 #' @examples
 #' ggplot(data = data(mtcars), aes(x = cyl, y = mpg)) + geom_point() + theme_bfte_roboto()
 theme_bfte_roboto <- list(
-  theme_classic(base_family = "roboto", base_size = 16) +
-  theme(panel.grid.major = element_line(linetype = 3, color = "grey", linewidth = 0.5),
+  ggplot2::theme_classic(base_family = "roboto", base_size = 16) +
+  ggplot2::theme(panel.grid.major = ggplot2::element_line(linetype = 3, color = "grey", linewidth = 0.5),
         legend.position = "none",
         axis.text.x = ggtext::element_markdown(angle = 90, vjust = 0.5, hjust = 1, color = "black"),
         axis.text.y = ggtext::element_markdown(color = "black")),
-  guides(x = guide_axis(cap = "both"), y = guide_axis(cap = "both"))
+  ggplot2::guides(x = ggplot2::guide_axis(cap = "both"), y = ggplot2::guide_axis(cap = "both"))
 )
 
