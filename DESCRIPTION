@@ -5,6 +5,30 @@ Version: 0.1.0
 Author: Brendan J. Kelly
 Maintainer: Brendan J. Kelly <brendank@upenn.edu>
 Description: Inspired by the tufte `ggthemes` and `tinyplot` format, drawing on the capabilities of `showtext`.
+URL: http://github.com/bjklab/bfte
+Depends:
+    R (>= 4.0),
+    sysfonts (≥ 0.7.1),
+    showtextdb (≥ 2.0)
+Imports:
+    ggplot2,
+    purrr,
+    showtext,
+    ggtext,
+	cli,
+    glue,
+    grDevices,
+    grid,
+    gtable (≥ 0.1.1),
+    isoband,
+    lifecycle (> 1.0.1),
+    MASS, mgcv,
+    rlang (≥ 1.1.0),
+    scales (≥ 1.3.0),
+    stats,
+    tibble,
+    vctrs (≥ 0.6.0),
+    withr (≥ 2.5.0)
 License: MIT
 Encoding: UTF-8
 LazyData: true
