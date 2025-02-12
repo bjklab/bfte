@@ -27,5 +27,5 @@ Three fonts are loaded by default: *Roboto*, *Nothing You Could Do*, and *Major 
 ready_fonts()
 }
 \seealso{
-\code{\link{theme_bfte_roboto}}, \code{\link{theme_bfte_nothing}}, \code{\link{theme_bfte_majormono}}
+\code{\link{theme_bfte_dx_roboto}}, \code{\link{theme_bfte_dx_nothing}}, \code{\link{theme_bfte_dx_majormono}}
 }
