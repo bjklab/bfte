@@ -2,8 +2,7 @@
 
 export(ready_fonts)
 export(theme_bfte_roboto)
-import("ggplot2,")
-import("ggtext,")
-import("showtext,")
+import(ggplot2)
+import(ggtext)
 import(purrr)
 import(showtext)

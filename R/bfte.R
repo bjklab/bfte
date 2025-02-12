@@ -1,7 +1,8 @@
 #' @title Ready fonts for bfte theme options
 #' @description Loads google fonts via the `showtext`` package.
 #' @details Three fonts are loaded by default: *Roboto*, *Nothing You Could Do*, and *Major Mono Display*.
-#' @import showtext, purrr
+#' @import showtext
+#' @import purrr
 #' @param google_font_name_vector vector of Google font names
 #' @param font_ref_vector vector of abbreviated font names
 #' @return fonts loaded into namespace
@@ -20,7 +21,9 @@ ready_fonts <- function(google_font_name_vector = c("Roboto", "Nothing You Could
 #' @title BFTE theme with Roboto font
 #' @description Adds a themed appearance and guide to a `ggplot2` object.
 #' @details The Roboto font is used in the theme.
-#' @import ggplot2, ggtext, showtext
+#' @import ggplot2
+#' @import ggtext
+#' @import showtext
 #' @return added to a 
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_nothing}}, \code{\link{theme_bfte_majormono}}
 #' @export
