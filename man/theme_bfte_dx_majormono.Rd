@@ -16,6 +16,8 @@ Adds a themed appearance and guide to a `ggplot2` object with a **discrete** x-a
 The *Major Mono Display* font is used in the theme.
 }
 \examples{
+ready_fonts()
+
 ggplot2::ggplot(data = data.frame(x = c("zero","ten","seventeen"), y = c(79,11,18)),
  ggplot2::aes(x = x, y = y)
  ) +

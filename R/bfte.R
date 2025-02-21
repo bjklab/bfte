@@ -32,6 +32,8 @@ ready_fonts <- function(google_font_name_vector = c("Roboto", "Nothing You Could
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_nothing}}, \code{\link{theme_bfte_majormono}}
 #' @export
 #' @examples
+#' ready_fonts()
+#' 
 #' ggplot2::ggplot(data = data.frame(x = c(0,10,17), y = c(79,11,18)),
 #'  ggplot2::aes(x = x, y = y)
 #'  ) +
@@ -63,6 +65,8 @@ theme_bfte_roboto <- function() {
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_roboto}}, \code{\link{theme_bfte_majormono}}
 #' @export
 #' @examples
+#' ready_fonts()
+#' 
 #' ggplot2::ggplot(data = data.frame(x = c(0,10,17), y = c(79,11,18)),
 #'  ggplot2::aes(x = x, y = y)
 #'  ) +
@@ -94,6 +98,8 @@ theme_bfte_nothing <- function() {
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_roboto}}, \code{\link{theme_bfte_nothing}}
 #' @export
 #' @examples
+#' ready_fonts()
+#' 
 #' ggplot2::ggplot(data = data.frame(x = c(0,10,17), y = c(79,11,18)),
 #'  ggplot2::aes(x = x, y = y)
 #'  ) +
@@ -125,6 +131,8 @@ theme_bfte_majormono <- function() {
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_dx_nothing}}, \code{\link{theme_bfte_dx_majormono}}
 #' @export
 #' @examples
+#' ready_fonts()
+#' 
 #' ggplot2::ggplot(data = data.frame(x = c("zero","ten","seventeen"), y = c(79,11,18)),
 #'  ggplot2::aes(x = x, y = y)
 #'  ) +
@@ -156,6 +164,8 @@ theme_bfte_dx_roboto <- function() {
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_dx_roboto}}, \code{\link{theme_bfte_dx_majormono}}
 #' @export
 #' @examples
+#' ready_fonts()
+#' 
 #' ggplot2::ggplot(data = data.frame(x = c("zero","ten","seventeen"), y = c(79,11,18)),
 #'  ggplot2::aes(x = x, y = y)
 #'  ) +
@@ -187,6 +197,8 @@ theme_bfte_dx_nothing <- function() {
 #' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_dx_roboto}}, \code{\link{theme_bfte_dx_nothing}}
 #' @export
 #' @examples
+#' ready_fonts()
+#' 
 #' ggplot2::ggplot(data = data.frame(x = c("zero","ten","seventeen"), y = c(79,11,18)),
 #'  ggplot2::aes(x = x, y = y)
 #'  ) +
@@ -207,4 +219,57 @@ theme_bfte_dx_majormono <- function() {
     )
   )
 }
+
+#' @title BFTE scale for continuous x-axis
+#' @description Adds an appropriate range for the `ggplot2` object's x-axis to match BFTE theming.
+#' @details The source data is used to inform scale range and breaks.
+#' @param axis_data variable depicted on the x-axis
+#' @import ggplot2
+#' @import scales
+#' @return scale for x-axis added to a `ggplot2` object
+#' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_roboto}}, \code{\link{theme_bfte_nothing}}
+#' @export
+#' @examples
+#' ready_fonts()
+#' 
+#' ggplot2::ggplot(data = data.frame(x = c(0,10,17), y = c(79,11,18)),
+#'  ggplot2::aes(x = x, y = y)
+#'  ) +
+#'  ggplot2::geom_point() +
+#'  scale_x_bfte(axis_data = c(0,10,17)) +
+#'  theme_bfte_majormono()
+scale_x_bfte <- function(axis_data) {
+  scale_x_continuous(
+    breaks= scales::pretty_breaks(bounds = TRUE),
+    trans = "identity",  # No transformation by default
+    limits = range(scales::pretty_breaks()(axis_data))
+  )
+}
+
+#' @title BFTE scale for continuous y-axis
+#' @description Adds an appropriate range for the `ggplot2` object's y-axis to match BFTE theming.
+#' @details The source data is used to inform scale range and breaks.
+#' @param axis_data variable depicted on the y-axis
+#' @import ggplot2
+#' @import scales
+#' @return scale for y-axis added to a `ggplot2` object
+#' @seealso \code{\link{ready_fonts}}, \code{\link{theme_bfte_roboto}}, \code{\link{theme_bfte_nothing}}
+#' @export
+#' @examples
+#' ready_fonts()
+#' 
+#' ggplot2::ggplot(data = data.frame(x = c(0,10,17), y = c(79,11,18)),
+#'  ggplot2::aes(x = x, y = y)
+#'  ) +
+#'  ggplot2::geom_point() +
+#'  scale_y_bfte(axis_data = c(79,11,18)) +
+#'  theme_bfte_majormono()
+scale_y_bfte <- function(axis_data) {
+  scale_y_continuous(
+    breaks= scales::pretty_breaks(bounds = TRUE),
+    trans = "identity",  # No transformation by default
+    limits = range(scales::pretty_breaks()(axis_data))
+  )
+}
+
 

@@ -16,6 +16,8 @@ Adds a themed appearance and guide to a `ggplot2` object with a **continuous** x
 The *Nothing You Could Do* font is used in the theme.
 }
 \examples{
+ready_fonts()
+
 ggplot2::ggplot(data = data.frame(x = c(0,10,17), y = c(79,11,18)),
  ggplot2::aes(x = x, y = y)
  ) +

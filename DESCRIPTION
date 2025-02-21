@@ -1,7 +1,7 @@
 Package: bfte
 Type: Package
 Title: A `ggplot2` Theme
-Version: 0.1.0
+Version: 0.2.0
 Author: Brendan J. Kelly
 Maintainer: Brendan J. Kelly <brendank@upenn.edu>
 Description: Inspired by the tufte `ggthemes` and `tinyplot` format, drawing on the capabilities of `showtext`.
@@ -14,6 +14,7 @@ Imports:
     sysfonts,
     ggtext,
     purrr,
+    scales,
     jsonlite
 License: MIT + file LICENSE
 Encoding: UTF-8
